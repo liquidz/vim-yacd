@@ -1,7 +1,7 @@
-" Yet Another Change Directory
+" Yet Another Changing Directory
 " Version: 1.0
 " Author: uochan <liquidz.uo@gmail.com>
-" License: VIM LICENSE
+" License: MIT LICENSE
 
 if exists('g:loaded_unmanaged')
   finish

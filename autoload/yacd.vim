@@ -1,7 +1,7 @@
-" 何かスゴイことをするプラグイン
+" Yet Another Changing Directory
 " Version: 1.0
 " Author: uochan <liquidz.uo@gmail.com>
-" License: VIM LICENSE
+" License: MIT LICENSE
 
 let s:save_cpo = &cpo
 set cpo&vim
