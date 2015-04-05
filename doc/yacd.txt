@@ -1,0 +1,47 @@
+*yacd.txt*	FIXME
+
+Version: 1.0
+Author: uochan <liquidz.uo@gmail.com>
+License: MIT LICENSE
+
+==============================================================================
+table of contents					*yacd-content*
+
+Introduction						|yacd-introduction|
+Interface						|yacd-interface|
+  Functions						|yacd-functions|
+Customize						|yacd-customizing|
+Changelog						|yacd-changelog|
+
+==============================================================================
+Introduction						*yacd-introduction*
+
+Yet another changind directory plugin.
+
+==============================================================================
+Interface						*yacd-interface*
+
+------------------------------------------------------------------------------
+Functions						*yacd-functions*
+
+  yacd#find_root_dir(dir, root_names)			*yacd#find_root_dir*
+  yacd#cd_to_root()					*yacd#cd_to_root*
+
+==============================================================================
+Customizing						*yacd-customizing*
+
+g:yacd#enable						*g:yacd#enable*
+  Set 0 to disable yacd.
+  Default value is 1.
+
+g:yacd#root_names					*g:yacd#root_names*
+  Default value is ['Rakefile', '.git'].
+
+==============================================================================
+Change log						*yacd-changelog*
+
+1.0		2015-04-05
+		- first version
+
+==============================================================================
+vim:tw=78:cc=78:ts=8:ft=help:norl:noexpandtab
