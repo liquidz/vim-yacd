@@ -1,12 +1,12 @@
 " Yet Another Changing Directory
-" Version: 1.0
+" Version: 1.1
 " Author: uochan <liquidz.uo@gmail.com>
 " License: MIT LICENSE
 
-if exists('g:loaded_unmanaged')
+if exists('g:loaded_yacd')
   finish
 endif
-let g:loaded_unmanaged = 1
+let g:loaded_yacd = 1
 
 let s:save_cpo = &cpo
 set cpo&vim

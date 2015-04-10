@@ -1,5 +1,5 @@
 " Yet Another Changing Directory
-" Version: 1.0
+" Version: 1.1
 " Author: uochan <liquidz.uo@gmail.com>
 " License: MIT LICENSE
 
@@ -7,7 +7,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 if !exists('g:yacd#enable')
-  let g:yacd#enable = 1
+  let g:yacd#enable = 0
 endif
 
 if !exists('g:yacd#root_names')
@@ -17,8 +17,9 @@ endif
 let s:V = vital#of('vital')
 let s:FilePath = s:V.import('System.Filepath')
 
-function! yacd#find_root_dir(dir, root_names)
-  for name in a:root_names
+function! yacd#get_root_dir(dir, ...)
+  let names = (len(a:000) == 0) ? g:yacd#root_names : a:000[0]
+  for name in names
     let path = s:FilePath.join(a:dir, name)
     if filereadable(path) || isdirectory(path)
       return a:dir
@@ -27,12 +28,12 @@ function! yacd#find_root_dir(dir, root_names)
 
   return (a:dir == '/')
         \ ? ''
-        \ : yacd#find_root_dir(s:FilePath.dirname(a:dir), a:root_names)
+        \ : yacd#get_root_dir(s:FilePath.dirname(a:dir), names)
 endfunction
 
 function! yacd#cd_to_root()
   if g:yacd#enable
-    let root_dir = yacd#find_root_dir(getcwd(), g:yacd#root_names)
+    let root_dir = yacd#get_root_dir(getcwd())
     if root_dir !=# ''
       execute ':lcd ' . fnameescape(root_dir)
     else
