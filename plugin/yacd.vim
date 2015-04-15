@@ -1,8 +1,3 @@
-" Yet Another Changing Directory
-" Version: 1.1
-" Author: uochan <liquidz.uo@gmail.com>
-" License: MIT LICENSE
-
 if exists('g:loaded_yacd')
   finish
 endif
