@@ -5,7 +5,7 @@
 let s:save_cpo = &cpo
 set cpo&vim
 
-let s:V = vital#of('vital')
+let s:V = vital#of('yacd')
 let s:FilePath = s:V.import('System.Filepath')
 
 ""
