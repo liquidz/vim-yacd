@@ -47,7 +47,7 @@ function! yacd#get_root_dir(dir, ...) abort
     endif
   endfor
 
-  return (s:is_system_root(a:dir))
+  return (s:is_system_root(a:dir) || a:dir ==# '')
         \ ? ''
         \ : yacd#get_root_dir(s:FilePath.dirname(a:dir), names)
 endfunction

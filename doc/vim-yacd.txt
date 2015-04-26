@@ -1,6 +1,6 @@
 *vim-yacd.txt*	Yet Another Changing Directory
 
-Version: 1.2.0
+Version: 1.2.1
 Author : uochan <liquidz.uo+vim@gmail.com>
 License: MIT LICENSE
 
