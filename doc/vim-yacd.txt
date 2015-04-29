@@ -35,7 +35,7 @@ Commands					*vim-yacd-commands*
 ------------------------------------------------------------------------------
 Functions					*vim-yacd-functions*
 
-yacd#get_root_dir(dir, ...)				*yacd#get_root_dir*
+yacd#get_root_dir(dir, ...)			*yacd#get_root_dir*
 	Returns a root directory.
 	  a:dir - Base directory to search root directory.
 	  a:000 - Root names. g#yacd#root_names will be used
@@ -56,7 +56,7 @@ Key Mappings					*vim-yacd-key-mappings*
 ==============================================================================
 Customizing					*vim-yacd-customizing*
 
-g:yacd#enable				*g:yacd#enable*
+g:yacd#enable					*g:yacd#enable*
 	Set 1 to enable this plugin.
 	Default value is 0.
 	
