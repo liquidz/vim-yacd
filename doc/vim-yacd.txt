@@ -1,6 +1,6 @@
 *vim-yacd.txt*	Yet Another Changing Directory
 
-Version: 1.2.1
+Version: 1.2.2
 Author : uochan <liquidz.uo+vim@gmail.com>
 License: MIT LICENSE
 
@@ -23,7 +23,6 @@ Introduction					*vim-yacd-introduction*
 
 Yet Another Changing Directory Plugin
 
-
 ==============================================================================
 Interface					*vim-yacd-interface*
 
@@ -40,11 +39,9 @@ yacd#get_root_dir(dir, ...)			*yacd#get_root_dir*
 	  a:dir - Base directory to search root directory.
 	  a:000 - Root names. g#yacd#root_names will be used
 	          if a:000 is not passed.
-	
 
 yacd#cd_to_root()				*yacd#cd_to_root*
 	Change local directory to root directory.
-	
 
 
 
@@ -59,12 +56,10 @@ Customizing					*vim-yacd-customizing*
 g:yacd#enable					*g:yacd#enable*
 	Set 1 to enable this plugin.
 	Default value is 0.
-	
 
 g:yacd#root_names				*g:yacd#root_names*
 	File or directory list that specify a root directory.
 	Default value is ['.svn', '.git'].
-	
 
 
 

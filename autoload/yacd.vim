@@ -39,17 +39,22 @@ endfunction
 "           if a:000 is not passed.
 "
 function! yacd#get_root_dir(dir, ...) abort
+  let dir = expand(a:dir)
+  if dir ==# '' || dir ==# '.'
+    return ''
+  endif
+
   let names = (len(a:000) == 0) ? g:yacd#root_names : a:000[0]
   for name in names
-    let path = s:FilePath.join(a:dir, name)
+    let path = s:FilePath.join(dir, name)
     if filereadable(path) || isdirectory(path)
-      return a:dir
+      return dir
     endif
   endfor
 
-  return (s:is_system_root(a:dir) || a:dir ==# '')
+  return s:is_system_root(dir)
         \ ? ''
-        \ : yacd#get_root_dir(s:FilePath.dirname(a:dir), names)
+        \ : yacd#get_root_dir(s:FilePath.dirname(dir), names)
 endfunction
 
 ""
