@@ -12,6 +12,10 @@ function! s:suite.get_root_dir_test() abort
       \ root_dir)
 endfunction
 
+function! s:suite.get_root_dir_error_test() abort
+  call s:assert.equals(yacd#get_root_dir('.'), '')
+endfunction
+
 function! s:suite.get_root_dir_test_with_custom_root_names() abort
   let test_dir = s:FilePath.join(getcwd(), 'test')
   call s:assert.equals(
